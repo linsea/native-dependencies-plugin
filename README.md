@@ -111,11 +111,11 @@ android {
 ```
 
 ##Tips
-1. The plugin create a Task named `collectso`, if you want to debug the configuration, run below command:
+1.The plugin create a Task named `collectso`, if you want to debug the configuration, run below command:
 ```
 ./gradlew -q --rerun-tasks collectso --info
 ```
-2. commonly your APP support limited ABI, others ABI .so files should be excluded from APK while packaging, in android plugin 2.2 and above, below configuration achieve desired effect:
+2.commonly your APP support limited ABI, others ABI .so files should be excluded from APK while packaging, in android plugin 2.2 and above, below configuration achieve desired effect:
 ```groovy
 android {
     packagingOptions { //assume your APP support armeabi-v7a only
