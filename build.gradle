@@ -27,10 +27,10 @@ dependencies {
 
 
 group 'com.github.linsea'
-version '0.2.0'
+version '0.2.1'
 
 pluginBundle {
-    website = 'https://github.com/linsea'
+    website = 'https://github.com/linsea/native-dependencies-plugin'
     vcsUrl = 'https://github.com/linsea/native-dependencies-plugin'
     description = 'a native(.so) dependencies resolver for android'
     tags = ['native', '.so', 'dependencies', 'android', 'dependency']

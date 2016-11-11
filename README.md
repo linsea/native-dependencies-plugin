@@ -17,7 +17,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.com.github.linsea:native-dependencies-plugin:0.2.0"
+    classpath "gradle.plugin.com.github.linsea:native-dependencies-plugin:0.2.1"
   }
 }
 
@@ -165,7 +165,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.com.github.linsea:native-dependencies-plugin:0.2.0"
+    classpath "gradle.plugin.com.github.linsea:native-dependencies-plugin:0.2.1"
   }
 }
 
