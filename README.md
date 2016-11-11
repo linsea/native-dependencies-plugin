@@ -1,3 +1,5 @@
+[中文版说明点这里](#中文版说明)
+
 Android Native Dependencies Resolver Gradle Plugin
 ==================================================
 
