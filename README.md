@@ -1,4 +1,4 @@
-[中文版说明点这里](#中文版说明)
+[中文版说明点这里](#cnzh)
 
 Android Native Dependencies Resolver Gradle Plugin
 ==================================================
@@ -9,7 +9,7 @@ and abi filtering utility functions.
 
 Also if you are building Android projects which depends native libraries with Maven and [android-maven-plugin](http://simpligility.github.io/android-maven-plugin/), this plugin helps migration from Maven to Gradle easily.
 
-##Usage
+## Usage
 **1. Introduce and apply the plugin**
 ```groovy
 buildscript {
@@ -100,7 +100,7 @@ nativeso {
 }
 ```
 
-##Notes
+## Notes
 The plugin make use of Gradle incremental build feature, it would not execute if the .so files are up to date, but if the files are out of date, the plugin would delete `jniLibs` directory, this cause problem if your APP module has already contains pre-build .so files in `jniLibs` directory(default:src/main/jniLibs), to avoid this problem, you should add a dedicated directory for the plugin, below snippet can achieve this:
 ```
 android {
@@ -112,7 +112,7 @@ android {
     }
 ```
 
-##Tips
+## Tips
 1.The plugin create a Task named `collectso`, if you want to debug the configuration, run below command:
 ```
 ./gradlew -q --rerun-tasks collectso --info
@@ -131,24 +131,24 @@ android {
 }
 ```
 
-##License
+## License
 
-Copyright 2015  Android Native Dependencies Resolver Gradle Plugin author
+    Copyright 2015  Android Native Dependencies Resolver Gradle Plugin author
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-   http://www.apache.org/licenses/LICENSE-2.0
+       http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 
-#中文版说明
+# 中文版说明<a name="cnzh"></a>
 
 Android 原生库依赖解析Gradle插件
 ==============================
@@ -157,7 +157,7 @@ Android 原生库依赖解析Gradle插件
 另外如果你是使用maven和[android-maven-plugin](http://simpligility.github.io/android-maven-plugin/)
 构建Android项目,并且项目里面有native依赖库的,如果现在想转移到Gradle构建系统上来,那么这个插件正好合适.
 
-##使用说明
+## 使用说明
 **1. 引入插件**
 ```groovy
 buildscript {
@@ -244,7 +244,7 @@ nativeso {
 }
 ```
 
-##注意事项
+## 注意事项
 插件会把so文件拷贝到jniLibs下对应的目录下,比如jniLibs/armeabi-v7a,而且会利用Gradle提供的缓存机制,提高编译速度,但是当依赖更新而过期时,需要重新下载并拷贝,在拷贝之前,插件会清空jniLibs目录.因此如果你的主模块项目已经包含了一些native依赖,并且.so文件已经放到jniLibs下的对应目录下,那么插件会同时把这些so文件也删除.为了避免这种情况发生,需要增加一个单独
 的jniLibs目录给插件使用,比如:
 ```
@@ -258,7 +258,7 @@ android {
 ```
 
 
-##使用技巧
+## 使用技巧
 1.插件增加了一个名为`collectso`的Task,并且利用了gradle的增量编译机制,如果文件是新的,Task不会重复执行.如果重命名时需要调试脚本,可以运行以下命令:
 ```
 ./gradlew -q --rerun-tasks collectso --info
